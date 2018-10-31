@@ -15,7 +15,6 @@ public class Teacher extends Human {
         return dekan;
     }
 
-
     @Override
     public String toString() {
         return String.format("teacherName: %s, studyOrTeach: %s, depends on: %s", getName(), getStudyOrTeach(), dekan.getName());

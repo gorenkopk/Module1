@@ -1,6 +1,7 @@
 package com.gorenko.pavel;
 
 public class Human implements Study{
+
     private boolean study;
     private boolean teach;
     private String studyOrTeach;
