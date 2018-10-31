@@ -1,12 +1,19 @@
 package com.gorenko.pavel;
 
 public class Dekan extends Human{
-    public Teacher [] teachers;
+    private Teacher [] teachers = new Teacher[2];
 
-    public Dekan(String name, Teacher teacher1, Teacher teacher2) {
+    public Dekan(String name) {
         super(name);
-        teachers = new Teacher[2];
-        teachers[0] = teacher1;
-        teachers[1] = teacher2;
+        teach(true);
+    }
+
+    public void setTeachers(int index, Teacher teacher) {
+        this.teachers[index] = teacher;
+    }
+
+    @Override
+    public String toString() {
+        return String.format("DekanName: %s, studyOrTeach: %s", getName(), getStudyOrTeach());
     }
 }

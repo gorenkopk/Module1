@@ -3,7 +3,8 @@ package com.gorenko.pavel;
 public class Human implements Study{
     private boolean study;
     private boolean teach;
-    String name;
+    private String studyOrTeach;
+    private String name;
 
     public boolean isStudy() {
         return study;
@@ -27,9 +28,27 @@ public class Human implements Study{
 
     public void study(boolean study) {
         this.study = study;
+        if ((study)) {
+            teach(false);
+        } else {
+            teach(true);
+        }
     }
 
     public void teach(boolean teach) {
         this.teach = teach;
+        if ((teach)) {
+            setStudyOrTeach("teach");
+        } else {
+            setStudyOrTeach("study");
+        }
+    }
+
+    public String getStudyOrTeach() {
+        return studyOrTeach;
+    }
+
+    public void setStudyOrTeach(String studyOrTeach) {
+        this.studyOrTeach = studyOrTeach;
     }
 }
