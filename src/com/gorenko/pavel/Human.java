@@ -28,8 +28,9 @@ public class Human implements Study{
 
     public void study(boolean study) {
         this.study = study;
-        if ((study)) {
-            teach(false);
+        if (study) {
+            setStudyOrTeach("study");
+            this.teach = false;
         } else {
             teach(true);
         }
@@ -37,10 +38,11 @@ public class Human implements Study{
 
     public void teach(boolean teach) {
         this.teach = teach;
-        if ((teach)) {
+        if (teach) {
             setStudyOrTeach("teach");
+            this.study = false;
         } else {
-            setStudyOrTeach("study");
+            study(true);
         }
     }
 

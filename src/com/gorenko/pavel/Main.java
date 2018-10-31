@@ -35,6 +35,5 @@ public class Main {
         System.out.println(student8);
         System.out.println(student9);
         System.out.println(student10);
-        
     }
 }
